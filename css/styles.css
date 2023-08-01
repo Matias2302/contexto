@@ -110,7 +110,7 @@ select {
 /*Primary header*/
 /*==============*/
 body{
-    background: steelblue;
+    background-color: #242B49;
 }
 
 .logo {
@@ -121,6 +121,9 @@ body{
 .primary-header{
     align-items: center;
     justify-content: space-between;
+    background-color: #242B49;
+    position: fixed;
+    width: 100%;
 }
 
 .mobile-nav-toggle{
@@ -143,10 +146,62 @@ body{
 
 .primary-navigation a{
     text-decoration: none;
+    color:#fff;
 }
 
 
-@media (max-width: 35em){
+
+@media (min-width:35em){
+    .primary-navigation{
+        padding-block: 2rem;
+        font-size:1.2rem;
+        padding-inline: clamp(3rem, 10vw ,10rem);
+    }
+}
+
+/*==========================================*/
+
+/*=====HERO======================================*/
+
+.hero{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap, 1rem);
+    min-height: 100vh;
+    background-color: #242B49;
+    align-items: center;
+}
+
+.box{
+    font-size: 1.5rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 2%;
+}
+
+
+/*===================INFORMES===============================*/
+
+.informes{
+    display:flex;
+    gap:1rem;
+    max-width:80vw;
+    margin:0 auto;
+    background-color: #8588A9;
+}
+
+.container-reel{
+    width:50%;
+}
+
+
+
+/*=====================================================*/
+
+
+/*=======================media queries=======================*/
+
+@media (max-width: 40em){
     .logo{
         width:40%;
     }
@@ -158,6 +213,10 @@ body{
         padding: min(30vh, 10rem) 2em;   
         transform: translateX(100%); 
         transition: transform 350ms ease-out;  
+    }
+    .primary-navigation a {
+        color: #000;
+        font-weight: 700;
     }
 
     .primary-navigation[data-visible=true]{
@@ -181,24 +240,18 @@ body{
     .mobile-nav-toggle[aria-expanded=true]{
         background-image: url(../assets/shared/icon-close.svg);
     }
-}
 
-@media (min-width:35em){
-    .primary-navigation{
-        padding-block: 2rem;
-        font-size:1.2rem;
-        padding-inline: clamp(3rem, 10vw ,10rem);
+    .hero{
+        display:grid;
+        grid-template-columns: 1fr;
     }
-}
-
-/*==========================================*/
-
-/*=====HERO======================================*/
-
-.hero{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--gap, 1rem);
-    min-height: 100vh;
-    background-color: #07193d;
+    .contexto-logo{
+        padding-top: 6rem;
+    }
+    .intro{
+        padding:1rem;
+    }
+    .box{
+        font-size:1rem;
+    }
 }

@@ -154,7 +154,7 @@ body{
 @media (min-width:35em){
     .primary-navigation{
         padding-block: 2rem;
-        font-size:1.2rem;
+        font-size: 1.5rem;
         padding-inline: clamp(3rem, 10vw ,10rem);
     }
 }
@@ -173,9 +173,10 @@ body{
 }
 
 .box{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    color: #fff;
     padding: 2rem;
-    background-color: #fff;
+    background-color: rgb(133,133,169, .15);
     border-radius: 2%;
 }
 
@@ -183,17 +184,26 @@ body{
 /*===================INFORMES===============================*/
 
 .informes{
-    display:flex;
-    gap:1rem;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
     max-width:80vw;
     margin:0 auto;
     background-color: #8588A9;
 }
 
 .container-reel{
-    width:50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.info-reel{
+    padding:1rem;
+}
+
+.img-reel{
+    border-radius: 3%;
+}
 
 
 /*=====================================================*/
@@ -213,6 +223,7 @@ body{
         padding: min(30vh, 10rem) 2em;   
         transform: translateX(100%); 
         transition: transform 350ms ease-out;  
+        font-size:1.5rem;
     }
     .primary-navigation a {
         color: #000;

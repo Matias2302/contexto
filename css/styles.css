@@ -22,6 +22,22 @@ dl,
 dd {
   margin: 0;
 }
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+@keyframes fade-out{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+    }
+}
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
@@ -105,6 +121,22 @@ select {
     border: 0;
   }
 
+  .container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+section{
+    margin: 1rem 0 1rem 0;
+}
+
+.fade-out{
+   animation: fade-out 1s;
+}
+
+.fade-in {
+    animation: fade-in .5s;
+  }
 /*=======================================================*/
 
 /*Primary header*/
@@ -154,7 +186,7 @@ body{
 @media (min-width:35em){
     .primary-navigation{
         padding-block: 2rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         padding-inline: clamp(3rem, 10vw ,10rem);
     }
 }
@@ -180,13 +212,44 @@ body{
     border-radius: 2%;
 }
 
+.media-element{
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: pointer;
+}
 
+/*======clases que cambian con el JS==============*/
+
+.hero-texto{
+    display:grid;
+    grid-template-columns: 1fr;
+}
+
+.texto-adicional-full{
+    background-color: #fff;
+    padding: 2rem;
+    font-size: 1.4rem;
+}
+
+.contexto-logo-mid{
+    margin:0 auto;
+}
+
+.box-1{
+    color: #000;
+    background-color: #fff;
+    max-width: 80%;
+    border-radius: 0;
+    margin: 0 auto;
+}
+
+/*===================================================*/
 /*===================INFORMES===============================*/
 
 .informes{
     display:grid;
     grid-template-columns: 1fr 1fr;
-    max-width:80vw;
+    max-width:90vw;
     margin:0 auto;
     background-color: #8588A9;
 }
@@ -195,6 +258,9 @@ body{
     display:flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    
 }
 
 .info-reel{
@@ -205,6 +271,25 @@ body{
     border-radius: 3%;
 }
 
+footer{
+    display:block;
+    font-size:100%;
+}
+
+#footer {
+    list-style: none;
+    padding: 8em 0 6em 0;
+    background: #8588A9;
+    color: #aaa;
+    text-align: center;
+}
+.logos{
+    display:flex;
+    justify-content: center;
+}
+.logos img{
+    width:60%;
+}
 
 /*=====================================================*/
 
@@ -223,7 +308,7 @@ body{
         padding: min(30vh, 10rem) 2em;   
         transform: translateX(100%); 
         transition: transform 350ms ease-out;  
-        font-size:1.5rem;
+        font-size:1.2rem;
     }
     .primary-navigation a {
         color: #000;
@@ -262,7 +347,19 @@ body{
     .intro{
         padding:1rem;
     }
+    .informes{
+        display:grid;
+        grid-template-columns: 1fr;
+        max-width:90vw;
+        margin:0 auto;
+        background-color: #8588A9;
+    }
+    .container-reel{
+        padding-top: 56.25%;
+    }
     .box{
         font-size:1rem;
     }
+    /*======FOOTER==========*/
+    
 }

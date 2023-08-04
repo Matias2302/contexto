@@ -33,7 +33,9 @@ mostrarBtn.addEventListener("click", function () {
     textoAdicional.classList.add("fade-in");
     textoAdicional.classList.add("texto-adicional-full");
     box.classList.add("box-1");
+    box.classList.add("fade-in");
     hero.classList.add("hero-texto");
+    contextoLogo.classList.add("slide-right");
     contextoLogo.classList.add("contexto-logo-mid");
     
     mostrarBtn.textContent = "Menos info";
@@ -42,6 +44,7 @@ mostrarBtn.addEventListener("click", function () {
     textoAdicional.classList.add("fade-out");
     box.classList.remove("box-1");
     hero.classList.remove("hero-texto");
+    contextoLogo.classList.add("slide-left");
     contextoLogo.classList.remove("contexto-logo-mid");
     textoAdicional.style.display = "none";
     mostrarBtn.textContent = "Más info";

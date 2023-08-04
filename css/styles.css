@@ -39,6 +39,38 @@ dd {
     }
 }
 
+/***** Global Slide *****/
+.slide-right, .slide-left {
+   width:100%;
+  }
+  
+  /***** Slide Right *****/
+  .slide-right {
+    animation: 1s slide-right;
+  }
+  @keyframes slide-right {
+    from {
+      margin-left: -100%;
+    }
+    to {
+      margin-left: 0%;
+    }
+  }
+  
+  /***** Slide Left *****/
+  .slide-left {
+    animation: 1s slide-left;
+  }
+  @keyframes slide-left {
+    from {
+      margin-left: 100%;
+    }
+    to {
+      margin-left: 0%;
+    }
+  }
+  
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
@@ -131,7 +163,8 @@ section{
 }
 
 .fade-out{
-   animation: fade-out 1s;
+   animation: fade-out .5s;
+   opacity: 0;
 }
 
 .fade-in {
@@ -241,6 +274,7 @@ body{
     max-width: 80%;
     border-radius: 0;
     margin: 0 auto;
+    padding: 2rem 2rem 0 2rem;
 }
 
 /*===================================================*/

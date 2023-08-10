@@ -447,38 +447,54 @@ footer{
 }
 
 .integrante{
+  position:relative;
   display:flex;
   align-items: center;
   padding: 2.2em 0 1em 0;
   margin: 0 auto;
-  width: 65%;
-  position:relative;
+  max-width: 60em;
+  
   overflow: hidden;
 }
 
-.integrante {
+.diagonal-box {
   position: relative;
-  overflow: hidden;
-  background-color: transparent;
+    height: auto;
+    background-image: linear-gradient(#242b49, #8588a9);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 calc(100% - 5vw)
+    );
 }
 
-.integrante::before {
-  content: "";
-position: absolute;
-top: -50px;
-left: 0;
-width: 100%;
-height: calc(100% + 100px);
-clip-path: polygon(0% 0%, 100% 50px, 100% 100%, 0% calc(100% – 50px));
+.diagonal-box-2 {
+  position: relative;
+    height: auto;
+    background-image: linear-gradient(#8588a9, #242b49 );
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 calc(100% - 5vw)
+    );
 }
 
+.content {
+  margin-top: -5vw;
+  background-image: linear-gradient(135deg, #777, #111);
+}
 
-
-
+.content {
+ max-width: 50em;
+   margin: 0 auto;
+   position: relative;
+}
 .colaboradores{
   display: flex;
   flex-direction: column;
-  padding:2.2em 0 1em 0;
+  padding:5rem;
   width:65%;
   margin:0 auto;
 }

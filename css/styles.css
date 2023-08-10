@@ -90,6 +90,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-size:1.2rem;
 }
 
 /* A elements that don't have a class get default styles */
@@ -178,6 +179,9 @@ body{
     background-color: #242B49;
 }
 
+nav{
+    background-color: #242B49;
+}
 .logo {
     margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
     width:40%;
@@ -186,9 +190,16 @@ body{
 .primary-header{
     align-items: center;
     justify-content: space-between;
-    background-color: #242B49;
     position: fixed;
     width: 100%;
+    
+    z-index:1;
+}
+
+.fondo-navbar{
+  height: 5rem;
+  background: hsl(0 0% 100% / .1);
+  backdrop-filter: blur(1rem);
 }
 
 .mobile-nav-toggle{
@@ -293,12 +304,15 @@ body{
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    padding:1rem;
     width: 100%;
     
 }
 
 .info-reel{
     padding:1rem;
+    display: flex;
+    align-items: center;
 }
 
 .img-reel{
@@ -313,7 +327,7 @@ footer{
 #footer {
     list-style: none;
     padding: 8em 0 6em 0;
-    background: #8588A9;
+    background: #242B49;
     color: #aaa;
     text-align: center;
 }
@@ -326,7 +340,210 @@ footer{
 }
 
 /*=====================================================*/
+/*====================================Texto informe=========================*/
+.sintesis{
+    background-color: #fff;
+    padding:2rem;
+}
 
+/*===================================================*/
+
+/*===============GLOSARIO================================*/
+#glosario{
+    padding-top:10rem;
+}
+
+.accordion {
+    width: 80%;
+    margin: 0 auto;
+    color: black;
+    background-color: #EDD694;
+    padding: 2rem 2rem 2rem 2rem;
+  }
+
+  .accordion h1{
+    font-size:2rem;
+    padding:2rem 0 2rem 0;
+  }
+  .accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+  }
+  
+  .accordion-content[aria-hidden="false"] {
+    grid-template-rows: 1fr;
+  }
+  
+  .accordion-content > div {
+    overflow: hidden;
+  }
+  .accordion-panel {
+    padding: 1rem;
+    border: 1px solid;
+    cursor: pointer;
+  }
+  
+  .accordion h2 {
+    position: relative;
+    font-size: 1.2rem;
+  }
+  
+  .accordion-trigger {
+    background: transparent;
+    border: 0;
+    padding:0;
+    font: inherit;
+    color: inherit;
+  }
+  
+  .accordion-trigger::before,
+  .accordion-trigger::after {
+    position: absolute;
+    right: 1em;
+    content: "";
+    display: block;
+    width: 1em;
+    height: 5px;
+    background: currentcolor;
+    transition: transform 500ms;
+  }
+  
+  .accordion-trigger::after {
+    rotate: 90deg;
+    translate: 0 -1.5em;
+  }
+  
+  .accordion-trigger[aria-expanded="true"]::before,
+  .accordion-trigger[aria-expanded="true"]::after {
+    transform: rotate(45deg);
+  }
+    
+/*=========================================================*/
+
+/*=========================INTEGRANTES================================*/
+#intro-integrantes{
+  padding-top:10rem;
+  margin:0;
+  
+}
+
+.intro-integrantes{
+  background-color: #8588A9;
+  padding:2rem;
+  font-size: 1.3rem;
+}
+
+.todos-integrantes{
+  background-color: #8588A9;
+  margin:0;
+}
+
+.todos-integrantes h2{
+  font-size: 1.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2rem;
+}
+
+.integrante{
+  display:flex;
+  align-items: center;
+  padding: 2.2em 0 1em 0;
+  margin: 0 auto;
+  width: 65%;
+  position:relative;
+  overflow: hidden;
+}
+
+.integrante {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.integrante::before {
+  content: "";
+position: absolute;
+top: -50px;
+left: 0;
+width: 100%;
+height: calc(100% + 100px);
+clip-path: polygon(0% 0%, 100% 50px, 100% 100%, 0% calc(100% – 50px));
+}
+
+
+
+
+.colaboradores{
+  display: flex;
+  flex-direction: column;
+  padding:2.2em 0 1em 0;
+  width:65%;
+  margin:0 auto;
+}
+
+.intro-integrantes h1{
+  font-size: 3rem;
+  text-align: center;
+}
+
+.estilo-1{
+  flex-direction: row;
+}
+
+
+.descripcion-integrante{
+  flex:1;
+  padding:1rem;
+}
+
+.descripcion-integrante h3{
+ 
+}
+
+h3.nombre{
+  letter-spacing: 0.1em;
+  margin: 0 0 1em 0;
+  text-transform: uppercase;
+  border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+  padding-bottom:2rem;
+}
+
+.estilo-2{
+  flex-direction: row-reverse;
+}
+
+.integrante img {
+  width: 250px; /* Ajusta el tamaño según tus necesidades */
+  height: 250px;
+  border: 1px solid #E2B833;
+  border-radius: 50%; /* Hace la imagen redonda */
+  object-fit: cover; /* Asegura que la imagen se ajuste al tamaño de la caja */
+  margin-right: 20px; /* Añade espacio entre la imagen y el texto */
+}
+
+.custom-shape-divider-top-1691615388 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1691615388 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 127px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1691615388 .shape-fill {
+  fill: #FFFFFF;
+}
+/*==========================================================*/
 
 /*=======================media queries=======================*/
 
@@ -341,7 +558,7 @@ footer{
         flex-direction: column;
         padding: min(30vh, 10rem) 2em;   
         transform: translateX(100%); 
-        transition: transform 350ms ease-out;  
+        transition: transform 350ms ease-out; 
         font-size:1.2rem;
     }
     .primary-navigation a {
@@ -393,6 +610,10 @@ footer{
     }
     .box{
         font-size:1rem;
+    }
+    .integrante{
+      flex-direction: column;
+      width:80%;
     }
     /*======FOOTER==========*/
     

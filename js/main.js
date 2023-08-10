@@ -1,3 +1,4 @@
+
 const primaryNav = document.querySelector('.primary-navigation');
 const navToggle = document.querySelector('.mobile-nav-toggle');
 
@@ -15,6 +16,7 @@ navToggle.addEventListener('click', () => {
     }
 });
 
+
 /*===Contenido dinámico con trigger====*/
 // Obtener el botón y el div con el texto adicional
 const mostrarBtn = document.getElementById("mostrarBtn");
@@ -23,6 +25,7 @@ const hero = document.getElementById("hero");
 const box = document.getElementById("box");
 const contextoLogo = document.getElementById("contexto-logo");
 
+if (mostrarBtn) {
 // Agregar un evento de clic al botón
 mostrarBtn.addEventListener("click", function () {
   // Mostrar o ocultar el div con el texto adicional
@@ -50,3 +53,38 @@ mostrarBtn.addEventListener("click", function () {
     mostrarBtn.textContent = "Más info";
   }
 });
+}
+/*================GLOASRIO==========================*/
+const accordion = document.querySelector(".accordion");
+
+if(accordion){
+accordion.addEventListener("click", (e) => {
+  const activePanel = e.target.closest(".accordion-panel");
+  if (!activePanel) return;
+  toggleAccordion(activePanel);
+});
+
+function toggleAccordion(panelToActivate) {
+  const activeButton = panelToActivate.querySelector("button");
+  const activePanel = panelToActivate.querySelector(".accordion-content");
+  const activePanelIsOpened = activeButton.getAttribute("aria-expanded");
+
+  if (activePanelIsOpened === "true") {
+    panelToActivate
+      .querySelector("button")
+      .setAttribute("aria-expanded", false);
+
+    panelToActivate
+      .querySelector(".accordion-content")
+      .setAttribute("aria-hidden", true);
+  } else {
+    panelToActivate.querySelector("button").setAttribute("aria-expanded", true);
+
+    panelToActivate
+      .querySelector(".accordion-content")
+      .setAttribute("aria-hidden", false);
+  }
+}
+
+}
+/*========================================*/
